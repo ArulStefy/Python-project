@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h1>View Details</h1>
+    <table>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Mail</th>
+            <th>Designation</th>
+            <th>Picture</th>
+        </tr>
+        {% for i in value %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.Name}}</td>
+            <td>{{i.Mail}}</td>
+            <td>{{i.Designation}}</td>
+            <td>
+                <img src="{{i.Picture.url}}" alt="{{i.Picture}}" width="150px" height="150px">
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+
+</body>
+</html>
